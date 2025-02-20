@@ -1,0 +1,29 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Boas-Vindas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    <p>Digite seu nome para receber uma saudação:</p>
+    <input type="text" id="nameInput" placeholder="Seu nome">
+    <button onclick="showGreeting()">Enviar</button>
+    <h2 id="greeting"></h2>
+
+    <script>
+        function showGreeting() {
+            const name = document.getElementById("nameInput").value.trim();
+            const greeting = document.getElementById("greeting");
+            
+            if (name) {
+                greeting.textContent = `Olá, ${name}! Seja bem-vindo ao meu site!`;
+            } else {
+                greeting.textContent = "Por favor, insira um nome.";
+            }
+        }
+    </script>
+</body>
+</html>
